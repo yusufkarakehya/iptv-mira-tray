@@ -150,33 +150,24 @@ function startServer() {
         const videoUrl = req.query.url;
         if (!videoUrl) return res.status(400).send(t('server.missingURL'));
 
-        const vlcPath = userVLCPath || detectVLCPath();
+        const vlcPath = userVLCPath;
+
         if (!vlcPath) {
-            dialog.showMessageBox({
-                type: 'error',
-                title: t('dialog.missingVLC.title'),
-                message: t('dialog.missingVLC.message'),
-                buttons: t('dialog.missingVLC.buttons')
-            }).then(result => {
-                if (result.response === 0) {
-                    dialog.showOpenDialog({ properties: ['openFile'] }).then(selectResult => {
-                        if (!selectResult.canceled && selectResult.filePaths.length > 0) {
-                            userVLCPath = selectResult.filePaths[0];
-                        }
-                    });
-                } else if (result.response === 1) {
-                    shell.openExternal('https://www.videolan.org/vlc/');
-                }
-            });
             return res.status(500).send(t('server.vlcNotFound'));
         }
 
-        const vlc = spawn(vlcPath, [videoUrl], {
-            detached: true,
-            stdio: 'ignore'
-        });
+        if (process.platform === 'darwin' && vlcPath.includes('.app')) {
+            spawn('open', ['-a', 'VLC', videoUrl], {
+                detached: true,
+                stdio: 'ignore'
+            }).unref();
+        } else {
+            spawn(vlcPath, [videoUrl], {
+                detached: true,
+                stdio: 'ignore'
+            }).unref();
+        }
 
-        vlc.unref();
         return res.send(t('server.launched'));
     });
 
@@ -185,7 +176,45 @@ function startServer() {
     });
 }
 
-function initializeApp() {
+const vlcPathFile = path.join(app.getPath('userData'), 'vlc-path.txt');
+
+function saveVLCPath(p) {
+    fs.writeFileSync(vlcPathFile, p);
+}
+
+function loadVLCPath() {
+    try {
+        const p = fs.readFileSync(vlcPathFile, 'utf-8');
+        if (fs.existsSync(p)) return p;
+    } catch { }
+    return null;
+}
+
+async function checkVLCOrPrompt() {
+    userVLCPath = loadVLCPath() || detectVLCPath();
+    if (!userVLCPath) {
+        const result = await dialog.showMessageBox({
+            type: 'error',
+            title: t('dialog.missingVLC.title'),
+            message: t('dialog.missingVLC.message'),
+            buttons: t('dialog.missingVLC.buttons')
+        });
+
+        if (result.response === 0) {
+            const selectResult = await dialog.showOpenDialog({ properties: ['openFile'] });
+            if (!selectResult.canceled && selectResult.filePaths.length > 0) {
+                userVLCPath = selectResult.filePaths[0];
+                saveVLCPath(userVLCPath);
+            }
+        } else if (result.response === 1) {
+            shell.openExternal('https://www.videolan.org/vlc/');
+        }
+    }
+}
+
+async function initializeApp() {
+    await checkVLCOrPrompt();
+
     tray = new Tray(path.join(__dirname, 'icon.png'));
 
     const languages = [
@@ -220,6 +249,7 @@ function initializeApp() {
                 const result = await dialog.showOpenDialog({ properties: ['openFile'] });
                 if (!result.canceled && result.filePaths.length > 0) {
                     userVLCPath = result.filePaths[0];
+                    saveVLCPath(userVLCPath);
                 }
             }
         },
@@ -274,20 +304,24 @@ function initializeApp() {
 }
 
 function initAutoUpdater() {
+    const log = require('electron-log');
+    autoUpdater.logger = log;
+    autoUpdater.logger.transports.file.level = 'debug';
+
     autoUpdater.on('checking-for-update', () => {
-        console.log('Checking for update...');
+        log.info('Checking for update...');
     });
 
     autoUpdater.on('update-available', (info) => {
-        console.log('Update available:', info.version);
+        log.info('Update available:', info.version);
     });
 
     autoUpdater.on('update-not-available', () => {
-        console.log('No updates available.');
+        log.info('No updates available.');
     });
 
     autoUpdater.on('error', (err) => {
-        console.error('Update error:', err);
+        log.error('Update error:', err);
     });
 
     autoUpdater.on('update-downloaded', () => {
