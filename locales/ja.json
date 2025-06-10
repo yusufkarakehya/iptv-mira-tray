@@ -1,6 +1,8 @@
 {
   "tray.tooltip": "Mira IPTV Player Bridge",
   "tray.selectPath": "VLC のパスを選択",
+  "version": "バージョン",
+  "check_for_updates": "アップデートを確認",
   "tray.language": "言語",
   "tray.autostart.label": "起動時に自動実行",
   "tray.autostart.enable": "有効にする",

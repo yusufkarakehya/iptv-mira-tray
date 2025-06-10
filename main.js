@@ -206,6 +206,14 @@ function initializeApp() {
     ];
 
     const contextMenu = Menu.buildFromTemplate([
+        { label: `${t('version')}: v${app.getVersion()}`, enabled: false },
+        { type: 'separator' },
+        {
+            label: t('check_for_updates'),
+            click: () => {
+                autoUpdater.checkForUpdates();
+            }
+        },
         {
             label: t('tray.selectPath'),
             click: async () => {

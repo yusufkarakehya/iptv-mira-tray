@@ -1,6 +1,8 @@
 {
   "tray.tooltip": "Mira IPTV Player Bridge",
   "tray.selectPath": "选择 VLC 路径",
+  "version": "版本",
+  "check_for_updates": "检查更新",
   "tray.language": "语言",
   "tray.autostart.label": "开机启动",
   "tray.autostart.enable": "启用",

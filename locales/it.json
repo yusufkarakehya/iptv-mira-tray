@@ -1,6 +1,8 @@
 {
   "tray.tooltip": "Mira IPTV Player Bridge",
   "tray.selectPath": "Seleziona percorso VLC",
+  "version": "Versione",
+  "check_for_updates": "Controlla aggiornamenti",
   "tray.language": "Lingua",
   "tray.autostart.label": "Avvia all'avvio",
   "tray.autostart.enable": "Abilita",
