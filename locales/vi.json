@@ -1,0 +1,20 @@
+{
+  "tray.tooltip": "Mira IPTV Player Bridge",
+  "tray.selectPath": "Chọn đường dẫn VLC",
+  "tray.language": "Ngôn ngữ",
+  "tray.autostart.label": "Khởi động cùng hệ thống",
+  "tray.autostart.enable": "Bật",
+  "tray.autostart.disable": "Tắt",
+  "tray.exit": "Thoát",
+  "dialog.missingVLC.title": "Không tìm thấy VLC",
+  "dialog.missingVLC.message": "Trình phát phương tiện VLC là cần thiết để phát video.\n\nNếu đã cài đặt, vui lòng chọn đường dẫn của nó. Nếu chưa, hãy tải và cài đặt VLC.",
+  "dialog.missingVLC.buttons": [
+    "Chọn đường dẫn VLC",
+    "Tải VLC",
+    "Hủy"
+  ],
+  "server.status": "Cầu nối Mira đang chạy",
+  "server.missingURL": "Thiếu URL",
+  "server.launched": "Đã khởi chạy trong VLC",
+  "server.vlcNotFound": "Không tìm thấy VLC"
+}

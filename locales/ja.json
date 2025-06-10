@@ -1,0 +1,20 @@
+{
+  "tray.tooltip": "Mira IPTV Player Bridge",
+  "tray.selectPath": "VLC のパスを選択",
+  "tray.language": "言語",
+  "tray.autostart.label": "起動時に自動実行",
+  "tray.autostart.enable": "有効にする",
+  "tray.autostart.disable": "無効にする",
+  "tray.exit": "終了",
+  "dialog.missingVLC.title": "VLC が見つかりません",
+  "dialog.missingVLC.message": "ビデオを再生するには VLC メディアプレイヤーが必要です。\n\nすでにインストール済みの場合は、そのパスを選択してください。未インストールの場合は、VLC をダウンロードしてインストールしてください。",
+  "dialog.missingVLC.buttons": [
+    "VLC のパスを選択",
+    "VLC をダウンロード",
+    "キャンセル"
+  ],
+  "server.status": "Mira Bridge が実行中です",
+  "server.missingURL": "URL が見つかりません",
+  "server.launched": "VLC で起動しました",
+  "server.vlcNotFound": "VLC が見つかりません"
+}

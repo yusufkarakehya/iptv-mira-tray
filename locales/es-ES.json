@@ -1,0 +1,20 @@
+{
+  "tray.tooltip": "Mira IPTV Player Bridge",
+  "tray.selectPath": "Seleccionar ruta de VLC",
+  "tray.language": "Idioma",
+  "tray.autostart.label": "Iniciar al encender",
+  "tray.autostart.enable": "Activar",
+  "tray.autostart.disable": "Desactivar",
+  "tray.exit": "Salir",
+  "dialog.missingVLC.title": "VLC no encontrado",
+  "dialog.missingVLC.message": "Se requiere el reproductor multimedia VLC para reproducir videos.\n\nSi ya está instalado, selecciona su ruta. De lo contrario, descarga e instala VLC.",
+  "dialog.missingVLC.buttons": [
+    "Seleccionar ruta de VLC",
+    "Descargar VLC",
+    "Cancelar"
+  ],
+  "server.status": "Mira Bridge está en funcionamiento",
+  "server.missingURL": "Falta la URL",
+  "server.launched": "Iniciado en VLC",
+  "server.vlcNotFound": "VLC no encontrado"
+}

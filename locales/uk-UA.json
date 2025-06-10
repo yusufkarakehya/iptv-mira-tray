@@ -1,0 +1,20 @@
+{
+  "tray.tooltip": "Mira IPTV Player Bridge",
+  "tray.selectPath": "Вибрати шлях до VLC",
+  "tray.language": "Мова",
+  "tray.autostart.label": "Запуск при старті системи",
+  "tray.autostart.enable": "Увімкнути",
+  "tray.autostart.disable": "Вимкнути",
+  "tray.exit": "Вихід",
+  "dialog.missingVLC.title": "VLC не знайдено",
+  "dialog.missingVLC.message": "Для відтворення відео потрібен медіаплеєр VLC.\n\nЯкщо він уже встановлений, будь ласка, вкажіть шлях до нього. Інакше завантажте та встановіть VLC.",
+  "dialog.missingVLC.buttons": [
+    "Вибрати шлях до VLC",
+    "Завантажити VLC",
+    "Скасувати"
+  ],
+  "server.status": "Mira Bridge запущено",
+  "server.missingURL": "URL відсутня",
+  "server.launched": "Запущено у VLC",
+  "server.vlcNotFound": "VLC не знайдено"
+}

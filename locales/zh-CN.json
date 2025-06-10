@@ -1,0 +1,20 @@
+{
+  "tray.tooltip": "Mira IPTV Player Bridge",
+  "tray.selectPath": "选择 VLC 路径",
+  "tray.language": "语言",
+  "tray.autostart.label": "开机启动",
+  "tray.autostart.enable": "启用",
+  "tray.autostart.disable": "禁用",
+  "tray.exit": "退出",
+  "dialog.missingVLC.title": "未找到 VLC",
+  "dialog.missingVLC.message": "需要 VLC 媒体播放器来播放视频。\n\n如果已安装，请选择其路径。否则，请下载并安装 VLC。",
+  "dialog.missingVLC.buttons": [
+    "选择 VLC 路径",
+    "下载 VLC",
+    "取消"
+  ],
+  "server.status": "Mira Bridge 正在运行",
+  "server.missingURL": "缺少 URL",
+  "server.launched": "已在 VLC 中启动",
+  "server.vlcNotFound": "未找到 VLC"
+}

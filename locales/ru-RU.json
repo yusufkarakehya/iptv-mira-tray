@@ -1,0 +1,20 @@
+{
+  "tray.tooltip": "Mira IPTV Player Bridge",
+  "tray.selectPath": "Выбрать путь к VLC",
+  "tray.language": "Язык",
+  "tray.autostart.label": "Автозапуск",
+  "tray.autostart.enable": "Включить",
+  "tray.autostart.disable": "Отключить",
+  "tray.exit": "Выход",
+  "dialog.missingVLC.title": "VLC не найден",
+  "dialog.missingVLC.message": "Для воспроизведения видео необходим медиаплеер VLC.\n\nЕсли он уже установлен, укажите путь к нему. В противном случае загрузите и установите VLC.",
+  "dialog.missingVLC.buttons": [
+    "Выбрать путь к VLC",
+    "Скачать VLC",
+    "Отмена"
+  ],
+  "server.status": "Mira Bridge запущен",
+  "server.missingURL": "Отсутствует URL",
+  "server.launched": "Запущено в VLC",
+  "server.vlcNotFound": "VLC не найден"
+}

@@ -1,0 +1,24 @@
+﻿END USER LICENSE AGREEMENT (EULA)
+
+This software ("Mira IPTV Player Bridge") is developed and owned by Yusuf Karakehya as a proprietary work. By installing or using this software, you agree to be bound by the terms of this agreement.
+
+1. LICENSE GRANT
+This software is licensed, not sold. You are granted a non-transferable, non-exclusive, and limited right to use this software solely as a supporting tool for websites and applications developed and owned by Yusuf Karakehya.
+
+2. RESTRICTIONS
+You may NOT:
+- Copy, distribute, or sublicense this software to any third party.
+- Reverse engineer, decompile, disassemble, or attempt to derive the source code.
+- Modify or create derivative works based on this software.
+- Use the software for any purpose other than in conjunction with Yusuf Karakehya's own services or applications.
+
+3. OWNERSHIP
+All intellectual property rights remain with Yusuf Karakehya. You obtain no ownership rights under this agreement.
+
+4. TERMINATION
+This license is effective until terminated. Failure to comply with any terms will result in automatic termination without notice.
+
+5. DISCLAIMER
+This software is provided "as is" without warranties of any kind. Yusuf Karakehya shall not be held liable for any damages arising from the use of this software.
+
+© 2025 Yusuf Karakehya. All rights reserved.

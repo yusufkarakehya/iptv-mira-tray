@@ -1,0 +1,20 @@
+{
+  "tray.tooltip": "Mira IPTV Player Bridge",
+  "tray.selectPath": "VLC Yolunu Seç",
+  "tray.language": "Dil",
+  "tray.autostart.label": "Açılışta Başlat",
+  "tray.autostart.enable": "Etkinleştir",
+  "tray.autostart.disable": "Devre Dışı Bırak",
+  "tray.exit": "Çıkış",
+  "dialog.missingVLC.title": "VLC Bulunamadı",
+  "dialog.missingVLC.message": "Video oynatmak için VLC medya oynatıcı gereklidir.\n\nEğer zaten yüklüyse, lütfen yolunu seçin. Aksi takdirde VLC’yi indirip yükleyin.",
+  "dialog.missingVLC.buttons": [
+    "VLC Yolunu Seç",
+    "VLC İndir",
+    "İptal"
+  ],
+  "server.status": "Mira Köprüsü çalışıyor",
+  "server.missingURL": "URL eksik",
+  "server.launched": "VLC'de başlatıldı",
+  "server.vlcNotFound": "VLC bulunamadı"
+}
