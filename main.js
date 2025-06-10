@@ -4,6 +4,8 @@ const express = require('express');
 const { spawn, execSync } = require('child_process');
 const fs = require('fs');
 const AutoLaunch = require('auto-launch');
+const { autoUpdater } = require("electron-updater");
+require('dotenv').config();
 
 let tray = null;
 let userVLCPath = null;
@@ -115,20 +117,35 @@ function startServer() {
     const server = express();
     const port = 54321;
 
-    const allowedOrigins = ['https://mira.karakehya.com'];
+    const allowedOrigins = [
+        'http://localhost:3333',
+        'http://127.0.0.1:3333',
+        'https://mira.karakehya.com',
+        'https://www.mira.karakehya.com'
+    ];
 
     function isAllowedOrigin(req) {
         const origin = req.get('origin') || req.get('referer') || '';
         return allowedOrigins.some(allowed => origin.startsWith(allowed));
     }
 
+    server.use((req, res, next) => {
+        const origin = req.headers.origin;
+        if (allowedOrigins.includes(origin)) {
+            res.setHeader('Access-Control-Allow-Origin', origin);
+        }
+        res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+        next();
+    });
+
     server.get('/status', (req, res) => {
-        // if (!isAllowedOrigin(req)) return res.status(403).send('Forbidden');
+        if (!isAllowedOrigin(req)) return res.status(403).send('Forbidden');
         res.send(t('server.status'));
     });
 
     server.get('/play', (req, res) => {
-        // if (!isAllowedOrigin(req)) return res.status(403).send('Forbidden');
+        if (!isAllowedOrigin(req)) return res.status(403).send('Forbidden');
 
         const videoUrl = req.query.url;
         if (!videoUrl) return res.status(400).send(t('server.missingURL'));
@@ -248,7 +265,40 @@ function initializeApp() {
     startServer();
 }
 
+function initAutoUpdater() {
+    autoUpdater.on('checking-for-update', () => {
+        console.log('Checking for update...');
+    });
+
+    autoUpdater.on('update-available', (info) => {
+        console.log('Update available:', info.version);
+    });
+
+    autoUpdater.on('update-not-available', () => {
+        console.log('No updates available.');
+    });
+
+    autoUpdater.on('error', (err) => {
+        console.error('Update error:', err);
+    });
+
+    autoUpdater.on('update-downloaded', () => {
+        dialog.showMessageBox({
+            type: 'info',
+            buttons: ['Restart Now', 'Later'],
+            title: 'Update Ready',
+            message: 'A new version has been downloaded. Restart the app to apply the update?'
+        }).then((result) => {
+            if (result.response === 0) autoUpdater.quitAndInstall();
+        });
+    });
+
+    autoUpdater.checkForUpdatesAndNotify();
+}
+
 app.whenReady().then(() => {
+    initAutoUpdater();
+
     if (!fs.existsSync(eulaAcceptedPath)) {
         showEULAWindow();
     } else {
