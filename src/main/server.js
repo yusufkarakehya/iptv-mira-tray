@@ -34,12 +34,9 @@ function startServer(port = 64722) {
         if (allowedOrigins.includes(origin)) {
             res.setHeader('Access-Control-Allow-Origin', origin);
         }
-        res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-        res.setHeader('Access-Control-Allow-Headers', 'X-MIRA-TOKEN');
-        
-        if (req.method === 'OPTIONS') {
-            return res.sendStatus(200);
-        }
+
+        res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'Content-Type, X-MIRA-TOKEN');
 
         next();
     });
