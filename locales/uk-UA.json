@@ -2,7 +2,8 @@
   "tray.tooltip": "Mira IPTV Player Bridge",
   "tray.selectPath": "Вибрати шлях до VLC",
   "tray.version": "Версія",
-  "tray.check_for_updates": "Перевірити оновлення",
+  "tray.checkForUpdates": "Перевірити оновлення",
+  "tray.about": "Про програму",
   "tray.language": "Мова",
   "tray.autostart.label": "Запуск при старті системи",
   "tray.autostart.enable": "Увімкнути",
@@ -15,8 +16,8 @@
     "Завантажити VLC",
     "Скасувати"
   ],
-  "server.status": "Mira Bridge запущено",
-  "server.missingURL": "URL відсутня",
-  "server.launched": "Запущено у VLC",
-  "server.vlcNotFound": "VLC не знайдено"
+  "updater.title": "Доступне оновлення",
+  "updater.message": "Завантажено нову версію. Перезапустити для застосування оновлення?",
+  "updater.restartNow": "Перезапустити зараз",
+  "updater.later": "Пізніше"
 }

@@ -2,7 +2,8 @@
   "tray.tooltip": "Mira IPTV Player Bridge",
   "tray.selectPath": "VLC Yolunu Seç",
   "tray.version": "Sürüm",
-  "tray.check_for_updates": "Güncellemeleri Denetle",
+  "tray.checkForUpdates": "Güncellemeleri Denetle",
+  "tray.about": "Hakkında",
   "tray.language": "Dil",
   "tray.autostart.label": "Açılışta Başlat",
   "tray.autostart.enable": "Etkinleştir",
@@ -15,8 +16,8 @@
     "VLC İndir",
     "İptal"
   ],
-  "server.status": "Mira Köprüsü çalışıyor",
-  "server.missingURL": "URL eksik",
-  "server.launched": "VLC'de başlatıldı",
-  "server.vlcNotFound": "VLC bulunamadı"
+  "updater.title": "Güncelleme hazır",
+  "updater.message": "Yeni bir sürüm indirildi. Güncellemeyi uygulamak için şimdi yeniden başlatılsın mı?",
+  "updater.restartNow": "Şimdi yeniden başlat",
+  "updater.later": "Daha sonra"
 }

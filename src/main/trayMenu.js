@@ -63,7 +63,7 @@ async function buildTrayMenuAsync() {
         { label: `${t('tray.version')}: v${app.getVersion()}`, enabled: false },
         { type: 'separator' },
         {
-            label: t('tray.check_for_updates'),
+            label: t('tray.checkForUpdates'),
             click: () => autoUpdater.checkForUpdates()
         },
         {

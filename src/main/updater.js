@@ -12,9 +12,9 @@ function initAutoUpdater({ translator }) {
     autoUpdater.on('update-downloaded', () => {
         dialog.showMessageBox({
             type: 'info',
-            buttons: [t('updater.restartNow') || 'Restart Now', t('updater.later') || 'Later'],
-            title: t('updater.title') || 'Update Ready',
-            message: t('updater.message') || 'A new version has been downloaded. Restart to apply the update?'
+            buttons: [t('updater.restartNow'), t('updater.later')],
+            title: t('updater.title'),
+            message: t('updater.message')
         }).then(result => {
             if (result.response === 0) {
                 autoUpdater.quitAndInstall();

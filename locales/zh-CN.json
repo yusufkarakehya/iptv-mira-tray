@@ -2,7 +2,8 @@
   "tray.tooltip": "Mira IPTV Player Bridge",
   "tray.selectPath": "选择 VLC 路径",
   "tray.version": "版本",
-  "tray.check_for_updates": "检查更新",
+  "tray.checkForUpdates": "检查更新",
+  "tray.about": "关于",
   "tray.language": "语言",
   "tray.autostart.label": "开机启动",
   "tray.autostart.enable": "启用",
@@ -15,8 +16,8 @@
     "下载 VLC",
     "取消"
   ],
-  "server.status": "Mira Bridge 正在运行",
-  "server.missingURL": "缺少 URL",
-  "server.launched": "已在 VLC 中启动",
-  "server.vlcNotFound": "未找到 VLC"
+  "updater.title": "更新可用",
+  "updater.message": "新版本已下载。是否立即重启以应用更新？",
+  "updater.restartNow": "立即重启",
+  "updater.later": "稍后"
 }

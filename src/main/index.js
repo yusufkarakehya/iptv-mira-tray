@@ -52,6 +52,11 @@ async function initializeApp() {
     startServer(config.serverPort);
 }
 
+if (process.platform === 'win32') {
+    app.setName('Mira IPTV Player Bridge');
+    app.setAppUserModelId('Mira IPTV Player Bridge');
+}
+
 app.whenReady().then(() => {
     initAutoUpdater({ translator: t });
     initializeApp();

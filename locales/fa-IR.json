@@ -1,9 +1,10 @@
 {
   "tray.tooltip": "Mira IPTV Player Bridge",
   "tray.selectPath": "انتخاب مسیر VLC",
-  "tray.tray.language": "زبان",
+  "tray.language": "زبان",
   "tray.version": "نسخه",
-  "check_for_updates": "بررسی برای به‌روزرسانی",
+  "tray.checkForUpdates": "بررسی برای به‌روزرسانی",
+  "tray.about": "درباره",
   "tray.autostart.label": "اجرا در هنگام راه‌اندازی",
   "tray.autostart.enable": "فعال‌سازی",
   "tray.autostart.disable": "غیرفعال‌سازی",
@@ -15,8 +16,8 @@
     "دانلود VLC",
     "انصراف"
   ],
-  "server.status": "پل Mira در حال اجرا است",
-  "server.missingURL": "URL وارد نشده است",
-  "server.launched": "در VLC اجرا شد",
-  "server.vlcNotFound": "VLC یافت نشد"
+  "updater.title": "به‌روزرسانی آماده است",
+  "updater.message": "نسخه جدیدی دانلود شده است. برای اعمال به‌روزرسانی، راه‌اندازی مجدد شود؟",
+  "updater.restartNow": "اکنون راه‌اندازی مجدد",
+  "updater.later": "بعداً"
 }

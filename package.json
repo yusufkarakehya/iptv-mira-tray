@@ -1,6 +1,6 @@
 {
   "name": "iptv-mira-tray",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Mira IPTV Player Bridge App",
   "main": "src/main/index.js",
   "scripts": {
@@ -31,6 +31,11 @@
   "build": {
     "appId": "com.karakehya.iptvmira.tray",
     "productName": "Mira IPTV Player Bridge",
+    "extraMetadata": {
+      "name": "Mira IPTV Player Bridge"
+    },
+    "asar": true,
+    "compression": "maximum",
     "publish": {
       "provider": "github",
       "owner": "yusufkarakehya",

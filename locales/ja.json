@@ -2,7 +2,8 @@
   "tray.tooltip": "Mira IPTV Player Bridge",
   "tray.selectPath": "VLC のパスを選択",
   "tray.version": "バージョン",
-  "tray.check_for_updates": "アップデートを確認",
+  "tray.checkForUpdates": "アップデートを確認",
+  "tray.about": "このアプリについて",
   "tray.language": "言語",
   "tray.autostart.label": "起動時に自動実行",
   "tray.autostart.enable": "有効にする",
@@ -15,8 +16,8 @@
     "VLC をダウンロード",
     "キャンセル"
   ],
-  "server.status": "Mira Bridge が実行中です",
-  "server.missingURL": "URL が見つかりません",
-  "server.launched": "VLC で起動しました",
-  "server.vlcNotFound": "VLC が見つかりません"
+  "updater.title": "アップデートの準備完了",
+  "updater.message": "新しいバージョンがダウンロードされました。再起動してアップデートを適用しますか？",
+  "updater.restartNow": "今すぐ再起動",
+  "updater.later": "後で"
 }

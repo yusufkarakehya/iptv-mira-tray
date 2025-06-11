@@ -2,7 +2,8 @@
   "tray.tooltip": "Mira IPTV Player Bridge",
   "tray.selectPath": "Chọn đường dẫn VLC",
   "tray.version": "Phiên bản",
-  "tray.check_for_updates": "Kiểm tra cập nhật",
+  "tray.checkForUpdates": "Kiểm tra cập nhật",
+  "tray.about": "Giới thiệu",
   "tray.language": "Ngôn ngữ",
   "tray.autostart.label": "Khởi động cùng hệ thống",
   "tray.autostart.enable": "Bật",
@@ -15,8 +16,8 @@
     "Tải VLC",
     "Hủy"
   ],
-  "server.status": "Cầu nối Mira đang chạy",
-  "server.missingURL": "Thiếu URL",
-  "server.launched": "Đã khởi chạy trong VLC",
-  "server.vlcNotFound": "Không tìm thấy VLC"
+  "updater.title": "Có bản cập nhật",
+  "updater.message": "Phiên bản mới đã được tải về. Khởi động lại để áp dụng bản cập nhật?",
+  "updater.restartNow": "Khởi động lại ngay",
+  "updater.later": "Để sau"
 }

@@ -2,7 +2,8 @@
   "tray.tooltip": "Mira IPTV Player Bridge",
   "tray.selectPath": "Selecionar caminho do VLC",
   "tray.version": "Versão",
-  "tray.check_for_updates": "Verificar atualizações",
+  "tray.checkForUpdates": "Verificar atualizações",
+  "tray.about": "Sobre",
   "tray.language": "Idioma",
   "tray.autostart.label": "Iniciar com o sistema",
   "tray.autostart.enable": "Ativar",
@@ -15,8 +16,8 @@
     "Baixar VLC",
     "Cancelar"
   ],
-  "server.status": "Mira Bridge está em execução",
-  "server.missingURL": "URL ausente",
-  "server.launched": "Iniciado no VLC",
-  "server.vlcNotFound": "VLC não encontrado"
+  "updater.title": "Atualização disponível",
+  "updater.message": "Uma nova versão foi baixada. Reiniciar para aplicar a atualização?",
+  "updater.restartNow": "Reiniciar agora",
+  "updater.later": "Mais tarde"
 }
