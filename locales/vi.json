@@ -1,8 +1,8 @@
 {
   "tray.tooltip": "Mira IPTV Player Bridge",
   "tray.selectPath": "Chọn đường dẫn VLC",
-  "version": "Phiên bản",
-  "check_for_updates": "Kiểm tra cập nhật",
+  "tray.version": "Phiên bản",
+  "tray.check_for_updates": "Kiểm tra cập nhật",
   "tray.language": "Ngôn ngữ",
   "tray.autostart.label": "Khởi động cùng hệ thống",
   "tray.autostart.enable": "Bật",

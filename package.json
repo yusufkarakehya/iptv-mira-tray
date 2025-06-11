@@ -1,8 +1,8 @@
 {
   "name": "iptv-mira-tray",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Mira IPTV Player Bridge App",
-  "main": "main.js",
+  "main": "src/main/index.js",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder",
@@ -19,7 +19,15 @@
     "bridge"
   ],
   "author": "Yusuf Karakehya",
-  "license": "EULA",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yusufkarakehya/iptv-mira-tray"
+  },
+  "bugs": {
+    "url": "https://github.com/yusufkarakehya/iptv-mira-tray/issues"
+  },
+  "homepage": "https://github.com/yusufkarakehya/iptv-mira-tray#readme",
   "build": {
     "appId": "com.karakehya.iptvmira.tray",
     "productName": "Mira IPTV Player Bridge",
@@ -32,12 +40,11 @@
       "output": "dist"
     },
     "files": [
-      "main.js",
-      "preload.js",
-      "icon.png",
-      "LICENSE.txt",
-      "eula.html",
-      "locales/**/*"
+      "src/main/**/*",
+      "src/assets/**/*",
+      "src/config/**/*",
+      "locales/**/*",
+      "LICENSE.txt"
     ],
     "win": {
       "icon": "icon.ico",
@@ -47,14 +54,13 @@
       "license": "LICENSE.txt"
     },
     "mac": {
-      "identity": "Apple Development: yusufkarakehya0726@gmail.com (K3DJK75238)",
+      "target": "dmg",
+      "icon": "icon.icns",
+      "category": "public.app-category.utilities",
       "hardenedRuntime": true,
       "entitlements": "entitlements.mac.plist",
       "entitlementsInherit": "entitlements.mac.plist",
-      "gatekeeperAssess": false,
-      "target": "dmg",
-      "icon": "icon.icns",
-      "category": "public.app-category.utilities"
+      "gatekeeperAssess": false
     },
     "linux": {
       "target": "AppImage"

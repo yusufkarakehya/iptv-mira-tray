@@ -1,24 +1,21 @@
-﻿END USER LICENSE AGREEMENT (EULA)
+﻿MIT License
 
-This software ("Mira IPTV Player Bridge") is developed and owned by Yusuf Karakehya as a proprietary work. By installing or using this software, you agree to be bound by the terms of this agreement.
+Copyright (c) 2025 Yusuf Karakehya
 
-1. LICENSE GRANT
-This software is licensed, not sold. You are granted a non-transferable, non-exclusive, and limited right to use this software solely as a supporting tool for websites and applications developed and owned by Yusuf Karakehya.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-2. RESTRICTIONS
-You may NOT:
-- Copy, distribute, or sublicense this software to any third party.
-- Reverse engineer, decompile, disassemble, or attempt to derive the source code.
-- Modify or create derivative works based on this software.
-- Use the software for any purpose other than in conjunction with Yusuf Karakehya's own services or applications.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-3. OWNERSHIP
-All intellectual property rights remain with Yusuf Karakehya. You obtain no ownership rights under this agreement.
-
-4. TERMINATION
-This license is effective until terminated. Failure to comply with any terms will result in automatic termination without notice.
-
-5. DISCLAIMER
-This software is provided "as is" without warranties of any kind. Yusuf Karakehya shall not be held liable for any damages arising from the use of this software.
-
-© 2025 Yusuf Karakehya. All rights reserved.
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
