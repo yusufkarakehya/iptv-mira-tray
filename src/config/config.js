@@ -9,7 +9,7 @@ module.exports = {
         "https://mira.karakehya.com",
         "https://www.mira.karakehya.com"
     ],
-    serverPort: 64722,
+    serverPort: 37373,
     vlcUrl: 'https://www.videolan.org/vlc/',
     devMode: process.env.DEBUG === 'true'
 };

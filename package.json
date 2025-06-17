@@ -1,6 +1,6 @@
 {
   "name": "iptv-mira-tray",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Mira IPTV Player Bridge App",
   "main": "src/main/index.js",
   "scripts": {
@@ -59,13 +59,19 @@
       "license": "LICENSE.txt"
     },
     "mac": {
-      "target": "dmg",
-      "icon": "icon.icns",
+      "target": [
+        "dmg"
+      ],
       "category": "public.app-category.utilities",
       "hardenedRuntime": true,
       "entitlements": "entitlements.mac.plist",
       "entitlementsInherit": "entitlements.mac.plist",
-      "gatekeeperAssess": false
+      "gatekeeperAssess": false,
+      "icon": "src/assets/icon.icns"
+    },
+    "dmg": {
+      "sign": false,
+      "icon": "src/assets/icon.icns"
     },
     "linux": {
       "target": "AppImage"

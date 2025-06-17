@@ -25,7 +25,7 @@ function getVLCPath() {
     return userVLCPath;
 }
 
-function startServer(port = 64722) {
+function startServer(port = 37373) {
     const server = express();
     server.use(express.json());
 

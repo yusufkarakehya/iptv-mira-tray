@@ -31,7 +31,6 @@ async function initializeApp() {
         getCurrentLocale: getCurrentLocale,
         setCurrentLocale: (localeCode) => {
             setLocale(localeCode);
-            setTranslator(t);
             rebuildTrayMenu();
         },
         autoLauncher: {
@@ -58,6 +57,10 @@ if (process.platform === 'win32') {
 }
 
 app.whenReady().then(() => {
+    if (process.platform === 'darwin') {
+        app.dock.hide();
+    }
+
     initAutoUpdater({ translator: t });
     initializeApp();
 });

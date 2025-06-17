@@ -5,7 +5,7 @@ const { autoUpdater } = require('electron-updater');
 const config = require('../config/config');
 
 let tray = null;
-let trayIconPath = path.join(__dirname, '..', 'assets', 'icon.png');
+let trayIconPath = path.join(__dirname, '..', 'assets', 'iconTemplate.png');
 
 let getCurrentLocale = () => 'en';
 let setAppLocale = () => { };
