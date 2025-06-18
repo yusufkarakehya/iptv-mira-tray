@@ -19,5 +19,8 @@
   "updater.title": "Có bản cập nhật",
   "updater.message": "Phiên bản mới đã được tải về. Khởi động lại để áp dụng bản cập nhật?",
   "updater.restartNow": "Khởi động lại ngay",
-  "updater.later": "Để sau"
+  "updater.later": "Để sau",
+  "updater.success.ok": "OK",
+  "updater.success.title": "Cập nhật thành công",
+  "updater.success.message": "Ứng dụng đã được cập nhật thành công lên phiên bản {{version}}."
 }

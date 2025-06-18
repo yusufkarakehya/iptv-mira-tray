@@ -19,5 +19,8 @@
   "updater.title": "Güncelleme hazır",
   "updater.message": "Yeni bir sürüm indirildi. Güncellemeyi uygulamak için şimdi yeniden başlatılsın mı?",
   "updater.restartNow": "Şimdi yeniden başlat",
-  "updater.later": "Daha sonra"
+  "updater.later": "Daha sonra",
+  "updater.success.ok": "Tamam",
+  "updater.success.title": "Güncelleme Başarılı",
+  "updater.success.message": "Uygulama başarıyla {{version}} sürümüne güncellendi."
 }

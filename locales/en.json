@@ -19,5 +19,8 @@
   "updater.title": "Update Ready",
   "updater.message": "A new version has been downloaded. Restart to apply the update?",
   "updater.restartNow": "Restart Now",
-  "updater.later": "Later"
+  "updater.later": "Later",
+  "updater.success.ok": "OK",
+  "updater.success.title": "Update Successful",
+  "updater.success.message": "The application was successfully updated to version {{version}}."
 }

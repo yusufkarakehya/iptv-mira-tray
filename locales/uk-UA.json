@@ -19,5 +19,8 @@
   "updater.title": "Доступне оновлення",
   "updater.message": "Завантажено нову версію. Перезапустити для застосування оновлення?",
   "updater.restartNow": "Перезапустити зараз",
-  "updater.later": "Пізніше"
+  "updater.later": "Пізніше",
+  "updater.success.ok": "OK",
+  "updater.success.title": "Оновлення успішне",
+  "updater.success.message": "Програму успішно оновлено до версії {{version}}."
 }

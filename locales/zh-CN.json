@@ -19,5 +19,8 @@
   "updater.title": "更新可用",
   "updater.message": "新版本已下载。是否立即重启以应用更新？",
   "updater.restartNow": "立即重启",
-  "updater.later": "稍后"
+  "updater.later": "稍后",
+  "updater.success.ok": "确定",
+  "updater.success.title": "更新成功",
+  "updater.success.message": "应用已成功更新到版本 {{version}}。"
 }

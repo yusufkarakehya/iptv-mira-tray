@@ -19,5 +19,8 @@
   "updater.title": "Mise à jour disponible",
   "updater.message": "Une nouvelle version a été téléchargée. Redémarrer pour appliquer la mise à jour ?",
   "updater.restartNow": "Redémarrer maintenant",
-  "updater.later": "Plus tard"
+  "updater.later": "Plus tard",
+  "updater.success.ok": "OK",
+  "updater.success.title": "Mise à jour réussie",
+  "updater.success.message": "L'application a été mise à jour avec succès vers la version {{version}}."
 }

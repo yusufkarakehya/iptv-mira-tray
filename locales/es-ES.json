@@ -19,5 +19,8 @@
   "updater.title": "Actualización disponible",
   "updater.message": "Se ha descargado una nueva versión. ¿Reiniciar para aplicar la actualización?",
   "updater.restartNow": "Reiniciar ahora",
-  "updater.later": "Más tarde"
+  "updater.later": "Más tarde",
+  "updater.success.ok": "Aceptar",
+  "updater.success.title": "Actualización exitosa",
+  "updater.success.message": "La aplicación se actualizó correctamente a la versión {{version}}."
 }

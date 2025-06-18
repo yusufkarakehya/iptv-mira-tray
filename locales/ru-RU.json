@@ -19,5 +19,8 @@
   "updater.title": "Доступно обновление",
   "updater.message": "Загружена новая версия. Перезапустить для применения обновления?",
   "updater.restartNow": "Перезапустить сейчас",
-  "updater.later": "Позже"
+  "updater.later": "Позже",
+  "updater.success.ok": "ОК",
+  "updater.success.title": "Обновление успешно",
+  "updater.success.message": "Приложение было успешно обновлено до версии {{version}}."
 }

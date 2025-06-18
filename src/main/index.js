@@ -10,7 +10,7 @@ const {
 } = require('./autoLaunch');
 const { resolveVLCPath, saveVLCPath } = require('./vlcPath');
 const { startServer, setVLCPath } = require('./server');
-const { initAutoUpdater } = require('./updater');
+const { initAutoUpdater, showUpdateSuccessIfNeeded } = require('./updater');
 const config = require('../config/config');
 require('dotenv').config();
 
@@ -57,6 +57,8 @@ if (process.platform === 'win32') {
 }
 
 app.whenReady().then(() => {
+    showUpdateSuccessIfNeeded();
+
     if (process.platform === 'darwin') {
         app.dock.hide();
     }

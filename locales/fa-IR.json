@@ -19,5 +19,8 @@
   "updater.title": "به‌روزرسانی آماده است",
   "updater.message": "نسخه جدیدی دانلود شده است. برای اعمال به‌روزرسانی، راه‌اندازی مجدد شود؟",
   "updater.restartNow": "اکنون راه‌اندازی مجدد",
-  "updater.later": "بعداً"
+  "updater.later": "بعداً",
+  "updater.success.ok": "باشه",
+  "updater.success.title": "به‌روزرسانی موفق",
+  "updater.success.message": "برنامه با موفقیت به نسخه {{version}} به‌روزرسانی شد."
 }
