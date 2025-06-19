@@ -1,12 +1,12 @@
 {
   "name": "iptv-mira-tray",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Mira IPTV Player Bridge App",
   "main": "src/main/index.js",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:mac": "electron-builder --mac"
   },
   "keywords": [
     "iptv",
@@ -67,7 +67,8 @@
       "entitlements": "entitlements.mac.plist",
       "entitlementsInherit": "entitlements.mac.plist",
       "gatekeeperAssess": false,
-      "icon": "src/assets/icon.icns"
+      "icon": "src/assets/icon.icns",
+      "notarize": true
     },
     "dmg": {
       "sign": false,
@@ -76,6 +77,9 @@
     "linux": {
       "target": "AppImage"
     }
+  },
+  "dmg": {
+    "icon": "src/assets/icon.icns"
   },
   "dependencies": {
     "auto-launch": "^5.0.6",

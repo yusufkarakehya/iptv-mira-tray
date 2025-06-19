@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const { autoUpdater } = require('electron-updater');
 const config = require('../config/config');
+const { nativeImage } = require('electron');
 
 let tray = null;
 let trayIconPath = path.join(__dirname, '..', 'assets', 'iconTemplate.png');
@@ -132,7 +133,10 @@ function createTray() {
         return;
     }
 
-    tray = new Tray(trayIconPath);
+    const icon = nativeImage.createFromPath(trayIconPath);
+    icon.setTemplateImage(true); // macOS dark/light mod uyumu için
+
+    tray = new Tray(icon);
     tray.setToolTip(translator('tray.tooltip'));
     rebuildTrayMenu();
 }
