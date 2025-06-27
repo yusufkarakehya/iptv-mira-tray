@@ -3,12 +3,11 @@ const { autoUpdater } = require('electron-updater');
 const fs = require('fs');
 const path = require('path');
 const log = require('electron-log');
+const { t } = require('./localization');
 
 const stateFilePath = path.join(app.getPath('userData'), 'update-state.json');
 
-function initAutoUpdater({ translator }) {
-    const t = translator || (key => key);
-
+function initAutoUpdater() {
     autoUpdater.on('error', (err) => {
         log.error('AutoUpdate error:', err);
     });

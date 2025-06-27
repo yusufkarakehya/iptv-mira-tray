@@ -1,7 +1,7 @@
 const { app } = require('electron');
 const log = require('electron-log');
 const { createTray, rebuildTrayMenu, setDependencies } = require('./trayMenu');
-const { t, setLocale, getCurrentLocale, loadLocale } = require('./localization');
+const { setLocale, getCurrentLocale, loadLocale } = require('./localization');
 const {
     initAutoLaunch,
     enableAutoLaunch,
@@ -21,13 +21,12 @@ let userVLCPath = null;
 async function initializeApp() {
     loadLocale();
 
-    userVLCPath = await resolveVLCPath(t);
+    userVLCPath = await resolveVLCPath();
     setVLCPath(userVLCPath);
 
     await initAutoLaunch();
 
     setDependencies({
-        translator: t,
         getCurrentLocale: getCurrentLocale,
         setCurrentLocale: (localeCode) => {
             setLocale(localeCode);
@@ -63,7 +62,7 @@ app.whenReady().then(() => {
         app.dock.hide();
     }
 
-    initAutoUpdater({ translator: t });
+    initAutoUpdater();
     initializeApp();
 });
 

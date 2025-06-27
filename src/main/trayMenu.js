@@ -4,6 +4,7 @@ const fs = require('fs');
 const { autoUpdater } = require('electron-updater');
 const config = require('../config/config');
 const { nativeImage } = require('electron');
+const { t } = require('./localization');
 
 let tray = null;
 let trayIconPath = path.join(__dirname, '..', 'assets', 'iconTemplate.png');
@@ -14,10 +15,8 @@ let getAutoLaunchStatus = async () => false;
 let setAutoLaunchEnabled = async () => { };
 let getVLCPath = () => null;
 let setVLCPath = () => { };
-let translator = key => key;
 
 function setDependencies({
-    translator: tFn,
     getCurrentLocale: getLocaleFn,
     setCurrentLocale,
     autoLauncher,
@@ -25,7 +24,6 @@ function setDependencies({
     setVLCPathFn,
     trayIcon = null
 }) {
-    translator = tFn;
     getCurrentLocale = getLocaleFn;
     setAppLocale = setCurrentLocale;
     getAutoLaunchStatus = autoLauncher?.isEnabled ?? (async () => false);
@@ -39,7 +37,6 @@ function setDependencies({
 }
 
 async function buildTrayMenuAsync() {
-    const t = translator;
     const autoLaunchEnabled = await getAutoLaunchStatus();
     const currentLocale = getCurrentLocale();
 
@@ -137,7 +134,7 @@ function createTray() {
     icon.setTemplateImage(true); // macOS dark/light mod uyumu için
 
     tray = new Tray(icon);
-    tray.setToolTip(translator('tray.tooltip'));
+    tray.setToolTip(t('tray.tooltip'));
     rebuildTrayMenu();
 }
 

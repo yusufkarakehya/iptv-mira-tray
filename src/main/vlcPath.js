@@ -3,6 +3,7 @@ const path = require('path');
 const { app, dialog, shell } = require('electron');
 const { execSync } = require('child_process');
 const config = require('../config/config');
+const { t } = require('./localization');
 
 const vlcPathFile = path.join(app.getPath('userData'), 'vlc-path.txt');
 
@@ -68,7 +69,7 @@ async function promptForVLCPath(t) {
     return null;
 }
 
-async function resolveVLCPath(t) {
+async function resolveVLCPath() {
     return loadVLCPath() || detectVLCPath() || await promptForVLCPath(t);
 }
 
