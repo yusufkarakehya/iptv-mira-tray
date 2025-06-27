@@ -6,8 +6,10 @@ module.exports = {
     allowedOrigins: [
         "http://localhost:3333",
         "http://127.0.0.1:3333",
-        "https://mira.karakehya.com",
-        "https://www.mira.karakehya.com"
+        "https://app.karakehya.com",
+        "https://www.app.karakehya.com",
+        "https://miraiptvplayer.com",
+        "https://www.miraiptvplayer.com"
     ],
     serverPort: 37373,
     vlcUrl: 'https://www.videolan.org/vlc/',

@@ -1,6 +1,6 @@
 {
   "name": "iptv-mira-tray",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Mira IPTV Player Bridge App",
   "main": "src/main/index.js",
   "scripts": {
