@@ -22,5 +22,5 @@
   "updater.later": "後で",
   "updater.success.ok": "OK",
   "updater.success.title": "アップデート成功",
-  "updater.success.message": "アプリケーションはバージョン{{version}}に正常に更新されました。"
+  "updater.success.message": "アプリケーションが正常に更新されました。"
 }

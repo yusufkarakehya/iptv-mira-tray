@@ -22,5 +22,5 @@
   "updater.later": "稍后",
   "updater.success.ok": "确定",
   "updater.success.title": "更新成功",
-  "updater.success.message": "应用已成功更新到版本 {{version}}。"
+  "updater.success.message": "应用程序已成功更新。"
 }

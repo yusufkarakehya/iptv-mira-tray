@@ -22,5 +22,5 @@
   "updater.later": "Để sau",
   "updater.success.ok": "OK",
   "updater.success.title": "Cập nhật thành công",
-  "updater.success.message": "Ứng dụng đã được cập nhật thành công lên phiên bản {{version}}."
+  "updater.success.message": "Ứng dụng đã được cập nhật thành công."
 }

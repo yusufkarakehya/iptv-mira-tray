@@ -22,5 +22,5 @@
   "updater.later": "Mais tarde",
   "updater.success.ok": "OK",
   "updater.success.title": "Atualização concluída com sucesso",
-  "updater.success.message": "A aplicação foi atualizada com sucesso para a versão {{version}}."
+  "updater.success.message": "A aplicação foi atualizada com sucesso."
 }

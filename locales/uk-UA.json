@@ -22,5 +22,5 @@
   "updater.later": "Пізніше",
   "updater.success.ok": "OK",
   "updater.success.title": "Оновлення успішне",
-  "updater.success.message": "Програму успішно оновлено до версії {{version}}."
+  "updater.success.message": "Додаток було успішно оновлено."
 }

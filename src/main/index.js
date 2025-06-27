@@ -1,7 +1,7 @@
 const { app } = require('electron');
 const log = require('electron-log');
 const { createTray, rebuildTrayMenu, setDependencies } = require('./trayMenu');
-const { setLocale, getCurrentLocale, loadLocale } = require('./localization');
+const { t, setLocale, getCurrentLocale, loadLocale } = require('./localization');
 const {
     initAutoLaunch,
     enableAutoLaunch,
@@ -21,12 +21,13 @@ let userVLCPath = null;
 async function initializeApp() {
     loadLocale();
 
-    userVLCPath = await resolveVLCPath();
+    userVLCPath = await resolveVLCPath(t);
     setVLCPath(userVLCPath);
 
     await initAutoLaunch();
 
     setDependencies({
+        translator: t,
         getCurrentLocale: getCurrentLocale,
         setCurrentLocale: (localeCode) => {
             setLocale(localeCode);
@@ -56,14 +57,13 @@ if (process.platform === 'win32') {
 }
 
 app.whenReady().then(() => {
-    showUpdateSuccessIfNeeded();
-
     if (process.platform === 'darwin') {
         app.dock.hide();
     }
 
-    initAutoUpdater();
     initializeApp();
+    showUpdateSuccessIfNeeded({ translator: t });
+    initAutoUpdater({ translator: t });
 });
 
 app.on('window-all-closed', (e) => {

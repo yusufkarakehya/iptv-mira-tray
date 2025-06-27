@@ -3,11 +3,13 @@ const { autoUpdater } = require('electron-updater');
 const fs = require('fs');
 const path = require('path');
 const log = require('electron-log');
-const { t } = require('./localization');
 
 const stateFilePath = path.join(app.getPath('userData'), 'update-state.json');
+const firstRunFlagPath = path.join(app.getPath('userData'), 'first-run.json');
 
-function initAutoUpdater() {
+function initAutoUpdater({ translator }) {
+    const t = translator || (key => key);
+
     autoUpdater.on('error', (err) => {
         log.error('AutoUpdate error:', err);
     });
@@ -52,17 +54,21 @@ function writeUpdateState(state) {
     } catch (err) { }
 }
 
-function showUpdateSuccessIfNeeded() {
+function showUpdateSuccessIfNeeded({ translator }) {
+    const t = translator || (key => key);
+
     const currentVersion = getCurrentAppVersion();
     const state = readUpdateState();
 
-    if (state.lastVersion && state.lastVersion !== currentVersion) {
-        dialog.showMessageBox({
-            type: 'info',
-            buttons: [t('updater.success.ok')],
-            title: t('updater.success.title'),
-            message: t('updater.success.message', { version: currentVersion })
-        });
+    if (fs.existsSync(firstRunFlagPath)) {
+        if (state.lastVersion && state.lastVersion !== currentVersion) {
+            dialog.showMessageBox({
+                type: 'info',
+                buttons: [t('updater.success.ok')],
+                title: t('updater.success.title'),
+                message: t('updater.success.message')
+            });
+        }
     }
 
     writeUpdateState({ lastVersion: currentVersion });

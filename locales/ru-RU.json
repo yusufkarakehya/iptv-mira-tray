@@ -22,5 +22,5 @@
   "updater.later": "Позже",
   "updater.success.ok": "ОК",
   "updater.success.title": "Обновление успешно",
-  "updater.success.message": "Приложение было успешно обновлено до версии {{version}}."
+  "updater.success.message": "Приложение было успешно обновлено."
 }
